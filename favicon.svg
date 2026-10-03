@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect x="2" y="2" width="60" height="60" rx="10" fill="#ffffff" stroke="#2C3540" stroke-width="4"/>
+  <text x="32" y="31" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="25" fill="#1a1a1a" letter-spacing="-1">JP</text>
+  <text x="32" y="52" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="19" fill="#E87722" letter-spacing="-0.5">LEA</text>
+</svg>

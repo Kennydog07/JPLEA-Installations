@@ -4,8 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JP Lea Installations | Kitchen Fitting & Bespoke Carpentry | West Sussex</title>
-<meta name="description" content="Expert kitchen installation and bespoke carpentry in West Sussex. Over 20 years experience. Serving Cuckfield, Haywards Heath and surrounding areas.">
+<meta name="description" content="Expert kitchen installation and bespoke carpentry in West Sussex. Over 20 years' experience. Serving Cuckfield, Haywards Heath and surrounding areas. Free, no-obligation estimates.">
+<meta name="theme-color" content="#2C3540">
+<!-- APTO PLACEHOLDER: if JP Lea gets a custom domain, replace https://jplea.netlify.app with it in the canonical, og:url, og:image, JSON-LD, robots.txt and sitemap.xml -->
+<link rel="canonical" href="https://jplea.netlify.app/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="JP Lea Installations">
+<meta property="og:title" content="JP Lea Installations | Kitchen Fitting &amp; Bespoke Carpentry | West Sussex">
+<meta property="og:description" content="Kitchen and bathroom installation, worktops, tiling and bespoke carpentry across Cuckfield, Haywards Heath and West Sussex. Over 20 years' experience. Free estimates.">
+<meta property="og:url" content="https://jplea.netlify.app/">
+<meta property="og:image" content="https://jplea.netlify.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="JP Lea Installations: a kitchen fitted by Jonny Lea">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "JP Lea Installations",
+  "description": "Kitchen installation, worktops, bathroom fitting, tiling, plastering, decorating and bespoke carpentry in West Sussex. Over 20 years' experience.",
+  "url": "https://jplea.netlify.app/",
+  "image": "https://jplea.netlify.app/og-image.jpg",
+  "logo": "https://jplea.netlify.app/apple-touch-icon.png",
+  "telephone": "+447361591810",
+  "founder": { "@type": "Person", "name": "Jonny Lea" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Cuckfield, Haywards Heath", "addressRegion": "West Sussex", "addressCountry": "GB" },
+  "areaServed": ["Haywards Heath", "Cuckfield", "Burgess Hill", "Horsham", "Crawley", "Brighton", "East Grinstead", "Lewes", "Mid Sussex", "West Sussex"],
+  "sameAs": ["https://www.checkatrade.com/trades/jpleainstallations1052146"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,11 +47,12 @@
   :root {
     --oak:       #B5843A;
     --oak-light: #D4A85A;
+    --oak-deep:  #8F6427; /* darker oak for text/buttons: passes WCAG AA with white */
     --slate:     #2C3540;
     --cream:     #F8F4EE;
     --warm-white:#FDFAF6;
     --text:      #1E2830;
-    --muted:     #6B7885;
+    --muted:     #5E6A77; /* was #6B7885, darkened for AA contrast on cream */
     --border:    #DDD8D0;
   }
 
@@ -63,15 +98,15 @@
     transition: color 0.2s, background 0.2s;
   }
   .nav-links a:hover, .nav-links a.active { color: var(--oak-light); background: rgba(181,132,58,0.12); }
-  .nav-cta { background: var(--oak); color: #fff !important; padding: 10px 22px !important; border-radius: 4px !important; }
-  .nav-cta:hover { background: var(--oak-light) !important; }
+  .nav-cta { background: var(--oak-deep); color: #fff !important; padding: 10px 22px !important; border-radius: 4px !important; }
+  .nav-cta:hover { background: var(--oak) !important; }
 
   /* ── HERO ── */
   #home {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 72px;
+    padding: 72px 0 0;
   }
 
   .hero-left {
@@ -88,10 +123,10 @@
 
   .hero-eyebrow {
     font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--oak); margin-bottom: 24px; position: relative;
+    color: var(--oak-light); margin-bottom: 24px; position: relative;
     display: flex; align-items: center; gap: 12px;
   }
-  .hero-eyebrow::before { content:''; width:32px; height:1px; background:var(--oak); }
+  .hero-eyebrow::before { content:''; width:32px; height:1px; background:var(--oak-light); }
 
   .hero-h1 {
     font-family: 'Playfair Display', serif;
@@ -106,7 +141,7 @@
 
   .hero-sub {
     margin-top: 28px; color: rgba(255,255,255,0.65); font-size: 1rem;
-    max-width: 380px; line-height: 1.7; position: relative;
+    max-width: 440px; line-height: 1.7; position: relative;
   }
 
   .hero-badges { display: flex; gap: 10px; margin-top: 36px; flex-wrap: wrap; position: relative; }
@@ -116,19 +151,22 @@
     font-size: 0.74rem; font-weight: 500; letter-spacing: 0.04em;
   }
 
-  .hero-actions { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; position: relative; }
+  .hero-rating { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; position: relative; color: rgba(255,255,255,0.85); font-size: 0.85rem; text-decoration: none; border-bottom: 1px solid transparent; width: fit-content; }
+  .hero-rating span { color: var(--oak-light); letter-spacing: 2px; }
+  .hero-rating:hover { border-bottom-color: var(--oak-light); }
+  .hero-actions { display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; position: relative; }
   .btn-primary {
-    background: var(--oak); color: #fff; padding: 14px 32px; border-radius: 3px;
+    background: var(--oak-deep); color: #fff; padding: 14px 32px; border-radius: 3px;
     text-decoration: none; font-weight: 600; font-size: 0.88rem;
     letter-spacing: 0.05em; text-transform: uppercase;
     transition: background 0.2s, transform 0.15s; display: inline-block;
   }
-  .btn-primary:hover { background: var(--oak-light); transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--oak); transform: translateY(-1px); }
   .btn-ghost {
-    color: rgba(255,255,255,0.75); padding: 14px 24px; border-radius: 3px;
+    color: rgba(255,255,255,0.85); padding: 14px 24px; border-radius: 3px;
     text-decoration: none; font-weight: 500; font-size: 0.88rem;
     letter-spacing: 0.05em; text-transform: uppercase;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.35);
     transition: border-color 0.2s, color 0.2s; display: inline-block;
   }
   .btn-ghost:hover { border-color: var(--oak-light); color: var(--oak-light); }
@@ -226,9 +264,9 @@
 
   .section-eyebrow {
     font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--oak); margin-bottom: 12px; display: flex; align-items: center; gap: 12px;
+    color: var(--oak-deep); margin-bottom: 12px; display: flex; align-items: center; gap: 12px;
   }
-  .section-eyebrow::before { content:''; width:24px; height:1px; background:var(--oak); flex-shrink:0; }
+  .section-eyebrow::before { content:''; width:24px; height:1px; background:var(--oak-deep); flex-shrink:0; }
 
   .section-title {
     font-family: 'Playfair Display', serif;
@@ -247,7 +285,7 @@
 
   .about-checklist { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
   .about-checklist li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.9rem; color: var(--text); }
-  .about-checklist li::before { content:'✓'; color:var(--oak); font-weight:700; flex-shrink:0; margin-top:1px; }
+  .about-checklist li::before { content:'✓'; color:var(--oak-deep); font-weight:700; flex-shrink:0; margin-top:1px; }
 
   .about-card { background: var(--slate); border-radius: 8px; padding: 48px 40px; color: #fff; }
   .about-card-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; }
@@ -267,12 +305,12 @@
   .service-card { background: #fff; padding: 40px 32px; transition: background 0.2s; }
   .service-card:hover { background: var(--slate); }
   .service-icon { font-size: 2rem; margin-bottom: 20px; display: block; }
-  .service-card-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--slate); margin-bottom: 12px; transition: color 0.2s; }
+  .service-card-title { font-family: 'Playfair Display', serif; line-height: 1.3; font-size: 1.2rem; font-weight: 700; color: var(--slate); margin-bottom: 12px; transition: color 0.2s; }
   .service-card:hover .service-card-title { color: #fff; }
   .service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; transition: color 0.2s; }
   .service-card:hover p { color: rgba(255,255,255,0.65); }
   .service-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-  .service-tag { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.05em; color: var(--oak); background: rgba(181,132,58,0.1); padding: 3px 10px; border-radius: 2px; transition: color 0.2s, background 0.2s; }
+  .service-tag { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.05em; color: var(--oak-deep); background: rgba(181,132,58,0.12); padding: 3px 10px; border-radius: 2px; transition: color 0.2s, background 0.2s; }
   .service-card:hover .service-tag { color: var(--oak-light); background: rgba(181,132,58,0.2); }
 
   /* ── CARPENTRY ── */
@@ -281,7 +319,7 @@
   .carpentry-hero { margin-top: 56px; background: var(--slate); border-radius: 8px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.2fr; }
   .carpentry-left { padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; }
   .carpentry-left h3 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 8px; }
-  .carpentry-left .italic-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; color: var(--oak-light); margin-bottom: 24px; }
+  .carpentry-left .italic-sub { display: block; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; color: var(--oak-light); margin-bottom: 24px; }
   .carpentry-left p { color: rgba(255,255,255,0.65); line-height: 1.75; font-size: 0.95rem; margin-bottom: 16px; }
   .carpentry-items { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 32px; }
   .carpentry-item { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; color: rgba(255,255,255,0.75); padding: 10px 12px; background: rgba(255,255,255,0.05); border-radius: 4px; }
@@ -294,8 +332,8 @@
 
   .carpentry-process { margin-top: 48px; display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; border-radius: 8px; overflow: hidden; }
   .process-step { background: var(--cream); padding: 32px 28px; }
-  .process-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: var(--border); line-height: 1; margin-bottom: 16px; }
-  .process-step h4 { font-size: 0.9rem; font-weight: 700; color: var(--slate); margin-bottom: 8px; letter-spacing: 0.02em; }
+  .process-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: var(--oak); line-height: 1; margin-bottom: 16px; }
+  .process-step h3 { font-size: 0.9rem; font-weight: 700; color: var(--slate); margin-bottom: 8px; letter-spacing: 0.02em; }
   .process-step p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
 
   /* ── REVIEWS ── */
@@ -307,69 +345,116 @@
   .stars { font-size: 1.4rem; color: var(--oak-light); letter-spacing: 2px; }
   .rating-sub { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
   .checkatrade-badge { margin-left: auto; background: rgba(255,255,255,0.06); border: 1px solid rgba(181,132,58,0.3); border-radius: 6px; padding: 16px 24px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-  .checkatrade-badge span:first-child { font-size: 0.65rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; }
+  .checkatrade-badge span:first-child { font-size: 0.65rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.1em; }
   .checkatrade-badge span:last-child { font-size: 0.85rem; color: rgba(255,255,255,0.8); font-weight: 600; }
 
   .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
   .review-card { background: #fff; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; border: 1px solid var(--border); }
   .review-header { display: flex; justify-content: space-between; align-items: flex-start; }
-  .review-score { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--oak); line-height: 1; }
+  .review-score { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--oak-deep); line-height: 1; }
   .review-score span { font-family: 'Inter', sans-serif; font-size: 0.7rem; color: var(--muted); font-weight: 400; }
   .review-date { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
-  .review-job { font-size: 0.72rem; font-weight: 600; color: var(--oak); text-transform: uppercase; letter-spacing: 0.08em; }
-  .review-title { font-weight: 700; font-size: 0.92rem; color: var(--slate); line-height: 1.35; }
+  .review-job { font-size: 0.72rem; font-weight: 600; color: var(--oak-deep); text-transform: uppercase; letter-spacing: 0.08em; }
+  .review-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--slate); line-height: 1.35; }
   .review-text { font-size: 0.88rem; color: var(--muted); line-height: 1.7; flex: 1; }
-  .review-location { font-size: 0.72rem; color: var(--border); letter-spacing: 0.04em; }
+  .review-location { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
 
   /* ── CONTACT ── */
   #contact { background: var(--slate); }
   #contact .section-eyebrow { color: var(--oak-light); }
   #contact .section-eyebrow::before { background: var(--oak-light); }
   #contact .section-title { color: #fff; }
-  #contact .section-body { color: rgba(255,255,255,0.6); }
+  #contact .section-body { color: rgba(255,255,255,0.75); }
 
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 56px; align-items: start; }
   .contact-methods { display: flex; flex-direction: column; gap: 0; }
   .contact-method { display: flex; align-items: flex-start; gap: 20px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .contact-method:first-child { padding-top: 0; }
   .contact-method-icon { width: 48px; height: 48px; background: rgba(181,132,58,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
-  .contact-method-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 4px; }
+  .contact-method-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
   .contact-method-value { font-size: 1rem; color: #fff; font-weight: 500; }
   .contact-method-value a { color: #fff; text-decoration: none; transition: color 0.2s; }
   .contact-method-value a:hover { color: var(--oak-light); }
-  .contact-method-note { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 3px; }
+  .contact-method-note { font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-top: 3px; }
 
   .contact-area { margin-top: 32px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 28px; }
-  .contact-area h4 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oak-light); margin-bottom: 12px; }
+  .contact-area h3 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oak-light); margin-bottom: 12px; }
   .area-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-  .area-pill { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.65); padding: 5px 12px; border-radius: 3px; font-size: 0.78rem; }
+  .area-pill { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.8); padding: 5px 12px; border-radius: 3px; font-size: 0.78rem; }
 
   .contact-form-panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 40px; }
   .contact-form-panel h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: 8px; }
-  .contact-form-panel p { font-size: 0.85rem; color: rgba(255,255,255,0.45); margin-bottom: 28px; }
+  .contact-form-panel > p { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 28px; }
   .form-group { margin-bottom: 16px; }
-  .form-group label { display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 6px; }
-  .form-group input, .form-group select, .form-group textarea { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 12px 16px; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
-  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--oak); }
+  .form-group label { display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.28); border-radius: 4px; padding: 12px 16px; color: #fff; font-family: 'Inter', sans-serif; font-size: 1rem; outline: none; transition: border-color 0.2s; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.45); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--oak-light); box-shadow: 0 0 0 3px rgba(212,168,90,0.25); }
   .form-group select option { background: var(--slate); color: #fff; }
   .form-group textarea { min-height: 100px; resize: vertical; }
-  .form-submit { width: 100%; background: var(--oak); color: #fff; border: none; border-radius: 4px; padding: 14px; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
-  .form-submit:hover { background: var(--oak-light); }
+  .form-submit { width: 100%; background: var(--oak-deep); color: #fff; border: none; border-radius: 4px; padding: 14px; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+  .form-submit:hover { background: var(--oak); }
+  .form-submit[disabled] { opacity: 0.7; cursor: wait; }
+  .form-group .req { color: var(--oak-light); }
+  .form-note { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 14px; }
+  .form-status { margin-top: 16px; padding: 14px 16px; border-radius: 4px; font-size: 0.9rem; display: none; }
+  .form-status.ok { display: block; background: rgba(60,140,90,0.18); border: 1px solid rgba(90,180,120,0.45); color: #fff; }
+  .form-status.err { display: block; background: rgba(200,70,50,0.18); border: 1px solid rgba(230,110,90,0.5); color: #fff; }
+  .hidden-field { position: absolute; left: -9999px; }
 
   /* ── FOOTER ── */
   footer { background: #111820; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; }
   .footer-logo span:first-child { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.8); }
-  .footer-logo span:last-child { font-size: 0.68rem; color: var(--oak); letter-spacing: 0.12em; text-transform: uppercase; display: block; }
+  .footer-logo span:last-child { font-size: 0.68rem; color: var(--oak-light); letter-spacing: 0.12em; text-transform: uppercase; display: block; }
   .footer-links { display: flex; gap: 24px; list-style: none; }
-  .footer-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
+  .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
   .footer-links a:hover { color: var(--oak-light); }
-  .footer-right { font-size: 0.75rem; color: rgba(255,255,255,0.2); }
+  .footer-right { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+
+  /* ── ACCESSIBILITY HELPERS ── */
+  .skip-link { position: absolute; left: 16px; top: -60px; z-index: 200; background: var(--oak-deep); color: #fff; padding: 10px 16px; border-radius: 4px; text-decoration: none; font-weight: 600; }
+  .skip-link:focus { top: 12px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--oak-light); outline-offset: 3px; }
+  section[id] { scroll-margin-top: 72px; }
+
+  /* ── MOBILE MENU ── */
+  .nav-mobile-actions { display: none; align-items: center; gap: 8px; }
+  .nav-call-mobile { color: #fff; text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; background: var(--oak-deep); padding: 9px 14px; border-radius: 4px; white-space: nowrap; }
+  .menu-toggle { width: 44px; height: 44px; background: transparent; border: 1px solid rgba(255,255,255,0.25); border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { content: ''; display: block; width: 20px; height: 2px; background: #fff; position: relative; transition: transform 0.2s, background 0.2s; }
+  .menu-toggle span::before { position: absolute; top: -6px; }
+  .menu-toggle span::after { position: absolute; top: 6px; }
+  .menu-toggle[aria-expanded="true"] span { background: transparent; }
+  .menu-toggle[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
 
   /* ── MOBILE ── */
+  @media (max-width: 1100px) and (min-width: 901px) {
+    nav { padding: 0 24px; }
+    .nav-links a { padding: 8px 10px; font-size: 0.76rem; }
+  }
   @media (max-width: 900px) {
-    nav { padding: 0 20px; }
-    .nav-links { display: none; }
+    nav { padding: 0 16px; }
+    .nav-mobile-actions { display: flex; }
+    .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; background: rgba(44,53,64,0.99); padding: 8px 16px 20px; border-top: 1px solid rgba(255,255,255,0.08); box-shadow: 0 12px 24px rgba(0,0,0,0.25); }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 14px 8px; font-size: 0.9rem; border-radius: 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-links .nav-cta { margin-top: 12px; text-align: center; border-bottom: none; }
+    .hero-h1 { font-size: clamp(2.2rem, 9vw, 2.8rem); }
+    .hero-actions a { flex: 1 1 auto; text-align: center; }
+    .slide-arrow { width: 38px; height: 38px; }
+    .slide-caption { left: 0; bottom: 48px; max-width: 80%; }
+    .slide-dots { left: 0; right: 0; bottom: 16px; justify-content: center; }
+    .photo-count { top: 12px; right: 12px; }
+    .carpentry-left { padding: 40px 24px; }
+    .reviews-rating-bar { padding: 28px 24px; }
+    .contact-form-panel { padding: 28px 20px; }
+    footer { padding: 32px 24px; }
     #home { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 60px 24px 40px; }
     .hero-right { height: 60vw; min-height: 280px; }
@@ -382,15 +467,27 @@
     .reviews-rating-bar { flex-direction: column; align-items: flex-start; gap: 16px; }
     .checkatrade-badge { margin-left: 0; }
     footer { flex-direction: column; gap: 20px; text-align: center; }
-    .footer-links { flex-wrap: wrap; justify-content: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 12px 20px; }
+  }
+  @media (max-width: 560px) {
+    .nav-logo span:last-child { display: none; }
+    .nav-logo span:first-child { font-size: 1rem; }
+    .carpentry-process { grid-template-columns: 1fr; }
+    .carpentry-items { grid-template-columns: 1fr; }
+    .big-score { font-size: 4rem; }
+    .section-title br, .hero-h1 br { display: none; }
+  }
+  @media (max-width: 380px) {
+    .nav-logo { display: none; }
   }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
-<nav>
-  <a href="#home" style="text-decoration:none;display:flex;align-items:center;gap:12px;">
+<nav aria-label="Main">
+  <a href="#home" aria-label="JP Lea Installations, back to top" style="text-decoration:none;display:flex;align-items:center;gap:12px;">
     <!-- JP LEA logo mark -->
     <div style="background:#fff;border:1px solid #ccc;border-radius:4px;padding:4px 8px;display:flex;align-items:center;flex-shrink:0;line-height:1;">
       <span style="font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:1.25rem;color:#1a1a1a;letter-spacing:-0.5px;">JP</span><span style="font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:1.25rem;color:#E87722;letter-spacing:-0.5px;">LEA</span>
@@ -400,23 +497,25 @@
       <span>West Sussex</span>
     </div>
   </a>
-  <ul class="nav-links">
+  <div class="nav-mobile-actions">
+    <a href="tel:+447361591810" class="nav-call-mobile">Call Jonny</a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav"><span></span></button>
+  </div>
+  <ul class="nav-links" id="primaryNav">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#carpentry">Bespoke Carpentry</a></li>
     <li><a href="#reviews">Reviews</a></li>
-    <li><a href="https://www.pinterest.co.uk" target="_blank" rel="noopener" title="Pinterest" style="display:flex;align-items:center;padding:8px 12px;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.141-.828 3.329-.236.995.499 1.806 1.476 1.806 1.77 0 3.135-1.866 3.135-4.56 0-2.383-1.714-4.05-4.16-4.05-2.833 0-4.496 2.124-4.496 4.32 0 .855.329 1.771.739 2.272a.3.3 0 01.069.286c-.075.313-.243.995-.276 1.134-.044.183-.146.222-.338.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.967-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z" fill="rgba(255,255,255,0.6)"/>
-      </svg>
-    </a></li>
+    <!-- APTO PLACEHOLDER: the Pinterest link pointed to pinterest.co.uk (not JP Lea's profile), so it is hidden.
+         Add JP Lea's Pinterest profile URL here and in the contact + footer sections to restore it. -->
     <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
   </ul>
 </nav>
 
+<main id="main">
 <!-- HERO -->
-<section id="home" style="padding:0;">
+<section id="home">
   <div class="hero-left">
     <div class="hero-eyebrow">Cuckfield · Haywards Heath · West Sussex</div>
     <h1 class="hero-h1">
@@ -434,17 +533,18 @@
       <span class="badge">Free Estimates</span>
       <span class="badge">Fully Insured</span>
     </div>
+    <a href="#reviews" class="hero-rating"><span aria-hidden="true">★★★★★</span> 9.9/10 from 13 verified Checkatrade reviews</a>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Request a Free Quote</a>
-      <a href="#reviews" class="btn-ghost">Read Reviews</a>
+      <a href="tel:+447361591810" class="btn-ghost">Call 07361 591810</a>
     </div>
   </div>
 
   <!-- SLIDESHOW -->
-  <div class="hero-right">
-    <div class="slideshow" id="slideshow">
+  <div class="hero-right" role="region" aria-roledescription="carousel" aria-label="Recent kitchen projects">
+    <div class="slideshow" id="slideshow" aria-live="off">
       <div class="slide active">
-        <img src="images/01-large-kitchen-installation.webp" width="599" height="449" alt="Large Kitchen Installation" loading="eager">
+        <img src="images/01-large-kitchen-installation.webp" width="599" height="449" alt="Large Kitchen Installation" loading="eager" fetchpriority="high">
         <div class="slide-overlay"></div>
         <div class="slide-caption"><span>Large Kitchen Installation</span></div>
       </div>
@@ -500,7 +600,7 @@
     <button class="slide-arrow next" id="nextBtn" aria-label="Next photo">&#8594;</button>
 
     <div class="slide-dots" id="dotContainer"></div>
-    <div class="photo-count" id="photoCount">1 / 10</div>
+    <div class="photo-count" id="photoCount" aria-hidden="true">1 / 10</div>
   </div>
 </section>
 
@@ -552,38 +652,38 @@
     <p class="section-body">JP Lea Installations covers the full scope of kitchen work — from a straightforward flat-pack fit to a complete top-to-bottom kitchen transformation.</p>
     <div class="services-grid">
       <div class="service-card">
-        <span class="service-icon">🍳</span>
-        <div class="service-card-title">Kitchen Fitting</div>
+        <span class="service-icon" aria-hidden="true">🍳</span>
+        <h3 class="service-card-title">Kitchen Fitting</h3>
         <p>Full kitchen installation from flat-pack or custom supply. Precise fitting of all units, cabinets, drawers, and doors with careful attention to level, alignment and finish.</p>
         <div class="service-tags"><span class="service-tag">Installation</span><span class="service-tag">Supply & Install</span><span class="service-tag">Refurbishment</span></div>
       </div>
       <div class="service-card">
-        <span class="service-icon">🪨</span>
-        <div class="service-card-title">Worktops</div>
+        <span class="service-icon" aria-hidden="true">🪨</span>
+        <h3 class="service-card-title">Worktops</h3>
         <p>Expert templating, cutting and fitting across all worktop materials. Jonny works with the full range of surfaces and knows how to make each one look and perform its best.</p>
         <div class="service-tags"><span class="service-tag">Granite</span><span class="service-tag">Quartz</span><span class="service-tag">Solid Wood</span><span class="service-tag">Laminate</span></div>
       </div>
       <div class="service-card">
-        <span class="service-icon">🚿</span>
-        <div class="service-card-title">Bathroom & En-Suite</div>
+        <span class="service-icon" aria-hidden="true">🚿</span>
+        <h3 class="service-card-title">Bathroom & En-Suite</h3>
         <p>Full bathroom and en-suite fitting including tiling, sanitaryware installation and finishing. A complete bathroom transformation handled with the same eye for detail as every kitchen project.</p>
         <div class="service-tags"><span class="service-tag">Bathrooms</span><span class="service-tag">En-Suites</span><span class="service-tag">Wet Rooms</span></div>
       </div>
       <div class="service-card">
-        <span class="service-icon">🧱</span>
-        <div class="service-card-title">Tiling</div>
+        <span class="service-icon" aria-hidden="true">🧱</span>
+        <h3 class="service-card-title">Tiling</h3>
         <p>Wall and floor tiling to professional standard. Kitchens, bathrooms, hallways, utility rooms. Large format tiles, intricate patterns and everything between — all handled in-house.</p>
         <div class="service-tags"><span class="service-tag">Wall Tiling</span><span class="service-tag">Floor Tiling</span><span class="service-tag">Splashbacks</span></div>
       </div>
       <div class="service-card">
-        <span class="service-icon">🎨</span>
-        <div class="service-card-title">Plastering & Decorating</div>
+        <span class="service-icon" aria-hidden="true">🎨</span>
+        <h3 class="service-card-title">Plastering & Decorating</h3>
         <p>Plastering, painting and decorating completed in-house so your project doesn't need to rely on multiple tradespeople. Everything finished to a proper standard before Jonny leaves.</p>
         <div class="service-tags"><span class="service-tag">Plastering</span><span class="service-tag">Painting</span><span class="service-tag">Decorating</span></div>
       </div>
       <div class="service-card">
-        <span class="service-icon">🏠</span>
-        <div class="service-card-title">Property Maintenance</div>
+        <span class="service-icon" aria-hidden="true">🏠</span>
+        <h3 class="service-card-title">Property Maintenance</h3>
         <p>General property maintenance and improvement across all trades. A trusted point of contact for domestic, commercial and insurance work throughout West Sussex.</p>
         <div class="service-tags"><span class="service-tag">Domestic</span><span class="service-tag">Commercial</span><span class="service-tag">Insurance Work</span></div>
       </div>
@@ -617,7 +717,7 @@
       </div>
       <div class="carpentry-right">
         <div class="wood-motif">
-          <svg class="wood-rings" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <svg class="wood-rings" aria-hidden="true" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(181,132,58,0.08)" stroke-width="2"/>
             <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(181,132,58,0.10)" stroke-width="2"/>
             <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(181,132,58,0.13)" stroke-width="2"/>
@@ -634,10 +734,10 @@
       </div>
     </div>
     <div class="carpentry-process">
-      <div class="process-step"><div class="process-num">1</div><h4>Consultation</h4><p>We discuss what you need, where it's going, and what matters most to you — style, function, materials, or all three.</p></div>
-      <div class="process-step"><div class="process-num">2</div><h4>Design & Quote</h4><p>Jonny works up the design, confirms dimensions and materials, and provides a clear, fixed quote before any work begins.</p></div>
-      <div class="process-step"><div class="process-num">3</div><h4>Handcraft</h4><p>Your piece is made to order — cut, joined, finished and checked to the same exacting standard applied to every project.</p></div>
-      <div class="process-step"><div class="process-num">4</div><h4>Installation</h4><p>Jonny fits and installs the finished piece himself, making sure everything is perfect before he considers the job done.</p></div>
+      <div class="process-step"><div class="process-num">1</div><h3>Consultation</h3><p>We discuss what you need, where it's going, and what matters most to you — style, function, materials, or all three.</p></div>
+      <div class="process-step"><div class="process-num">2</div><h3>Design & Quote</h3><p>Jonny works up the design, confirms dimensions and materials, and provides a clear, fixed quote before any work begins.</p></div>
+      <div class="process-step"><div class="process-num">3</div><h3>Handcraft</h3><p>Your piece is made to order — cut, joined, finished and checked to the same exacting standard applied to every project.</p></div>
+      <div class="process-step"><div class="process-num">4</div><h3>Installation</h3><p>Jonny fits and installs the finished piece himself, making sure everything is perfect before he considers the job done.</p></div>
     </div>
   </div>
 </section>
@@ -649,48 +749,48 @@
     <h2 class="section-title">What customers say</h2>
     <p class="section-body">All reviews are independently verified through Checkatrade. These are real customers, real projects, real results.</p>
     <div class="reviews-rating-bar">
-      <div class="big-score">9.9</div>
+      <div class="big-score" aria-hidden="true">9.9</div>
       <div class="rating-details">
-        <div class="stars">★★★★★</div>
-        <div style="color:#fff;font-size:1rem;font-weight:600;margin-top:4px;">Average score across 13 verified reviews</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <div style="color:#fff;font-size:1rem;font-weight:600;margin-top:4px;">Average score of 9.9 out of 10 across 13 verified reviews</div>
         <div class="rating-sub">Independently verified by Checkatrade · Member since January 2022</div>
       </div>
-      <div class="checkatrade-badge"><span>Verified on</span><span>Checkatrade</span></div>
+      <a class="checkatrade-badge" href="https://www.checkatrade.com/trades/jpleainstallations1052146" target="_blank" rel="noopener" style="text-decoration:none;"><span>Verified on</span><span>Checkatrade &rarr;</span></a>
     </div>
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-header"><div><div class="review-job">Kitchen Fitting</div><div class="review-date">1 April 2025</div></div><div class="review-score">9.67<span>/10</span></div></div>
-        <div class="review-title">Installation of a Wickes kitchen</div>
+        <h3 class="review-title">Installation of a Wickes kitchen</h3>
         <div class="review-text">"Jonny proved to be a very reliable and capable kitchen fitter. Communication was very good and I was very impressed with his attention to detail. He came to quote after I had ordered the kitchen but was able to suggest improvements to the design that I hadn't thought of. I cannot recommend him highly enough."</div>
         <div class="review-location">Verified · RH15</div>
       </div>
       <div class="review-card">
         <div class="review-header"><div><div class="review-job">Kitchen · Bathroom · Tiling</div><div class="review-date">12 January 2025</div></div><div class="review-score">10<span>/10</span></div></div>
-        <div class="review-title">Full Kitchen, Bathroom & En-Suite</div>
+        <h3 class="review-title">Full Kitchen, Bathroom & En-Suite</h3>
         <div class="review-text">"If it's perfection you want, then Jonny Lea is the tradesperson you need. Of all the skilled people I've employed across several properties, Jonny is meticulous, conscientious and diligent throughout. He always arrives on time and works with little breaks — his work puts other 'so called' professionals to shame."</div>
         <div class="review-location">Verified · RH17</div>
       </div>
       <div class="review-card">
         <div class="review-header"><div><div class="review-job">Kitchens</div><div class="review-date">30 September 2022</div></div><div class="review-score">9.75<span>/10</span></div></div>
-        <div class="review-title">Fitting a kitchen</div>
+        <h3 class="review-title">Fitting a kitchen</h3>
         <div class="review-text">"Jonny fitted our kitchen this summer and delivered a fantastic fit. His attention to detail and final finish was amazing. Would highly recommend."</div>
         <div class="review-location">Verified · GU6</div>
       </div>
       <div class="review-card">
         <div class="review-header"><div><div class="review-job">Kitchens</div><div class="review-date">5 July 2022</div></div><div class="review-score">10<span>/10</span></div></div>
-        <div class="review-title">Removed old units and fitted a new kitchen</div>
+        <h3 class="review-title">Removed old units and fitted a new kitchen</h3>
         <div class="review-text">"We asked Jonny to fit our new kitchen. He was able to organise and handle all aspects of the complex fitting work. He has a good eye for detail and is very hard working. His multi-trade skills meant he resolved issues that arose during the build. Our new kitchen looks brilliant."</div>
         <div class="review-location">Verified · RH16</div>
       </div>
       <div class="review-card">
         <div class="review-header"><div><div class="review-job">Kitchens</div><div class="review-date">27 March 2022</div></div><div class="review-score">10<span>/10</span></div></div>
-        <div class="review-title">Kitchen fitted in annex</div>
+        <h3 class="review-title">Kitchen fitted in annex</h3>
         <div class="review-text">"Such a friendly person — dealt with questions helpfully. Finished work better than I expected. Highly recommend."</div>
         <div class="review-location">Verified · RH17</div>
       </div>
       <div class="review-card">
         <div class="review-header"><div><div class="review-job">Kitchens</div><div class="review-date">1 February 2022</div></div><div class="review-score">10<span>/10</span></div></div>
-        <div class="review-title">New kitchen fitted into an extension</div>
+        <h3 class="review-title">New kitchen fitted into an extension</h3>
         <div class="review-text">"Jonny had done work for us before so we knew his standards were high. He's the cleanest working tradesman I've ever met — and when our supplier let us down with the worktops, Jonny was round to fit a temporary solution to get us through Christmas dinner. First class."</div>
         <div class="review-location">Verified · RH17</div>
       </div>
@@ -708,7 +808,7 @@
       <div>
         <div class="contact-methods">
           <div class="contact-method">
-            <div class="contact-method-icon">📞</div>
+            <div class="contact-method-icon" aria-hidden="true">📞</div>
             <div>
               <div class="contact-method-label">Phone</div>
               <div class="contact-method-value"><a href="tel:+447361591810">07361 591810</a></div>
@@ -716,7 +816,7 @@
             </div>
           </div>
           <div class="contact-method">
-            <div class="contact-method-icon">📍</div>
+            <div class="contact-method-icon" aria-hidden="true">📍</div>
             <div>
               <div class="contact-method-label">Based in</div>
               <div class="contact-method-value">Cuckfield, Haywards Heath</div>
@@ -724,26 +824,17 @@
             </div>
           </div>
           <div class="contact-method">
-            <div class="contact-method-icon">✅</div>
+            <div class="contact-method-icon" aria-hidden="true">✅</div>
             <div>
               <div class="contact-method-label">Checkatrade</div>
-              <div class="contact-method-value"><a href="https://www.checkatrade.com/trades/jpleainstallations1052146" target="_blank">View profile & reviews</a></div>
+              <div class="contact-method-value"><a href="https://www.checkatrade.com/trades/jpleainstallations1052146" target="_blank" rel="noopener">View profile & reviews</a></div>
               <div class="contact-method-note">Verified member since January 2022</div>
             </div>
           </div>
-          <div class="contact-method">
-            <div class="contact-method-icon" style="background:rgba(230,0,35,0.12);">
-              <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.141-.828 3.329-.236.995.499 1.806 1.476 1.806 1.77 0 3.135-1.866 3.135-4.56 0-2.383-1.714-4.05-4.16-4.05-2.833 0-4.496 2.124-4.496 4.32 0 .855.329 1.771.739 2.272a.3.3 0 01.069.286c-.075.313-.243.995-.276 1.134-.044.183-.146.222-.338.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.967-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z" fill="#E60023"/></svg>
-            </div>
-            <div>
-              <div class="contact-method-label">Pinterest</div>
-              <div class="contact-method-value"><a href="https://www.pinterest.co.uk" target="_blank" rel="noopener">Follow our work on Pinterest</a></div>
-              <div class="contact-method-note">Inspiration, projects & ideas</div>
-            </div>
-          </div>
+          <!-- APTO PLACEHOLDER: Pinterest contact row removed until JP Lea's real Pinterest profile URL is supplied. -->
         </div>
         <div class="contact-area">
-          <h4>Areas Covered</h4>
+          <h3>Areas Covered</h3>
           <div class="area-pills">
             <span class="area-pill">Haywards Heath</span><span class="area-pill">Cuckfield</span>
             <span class="area-pill">Burgess Hill</span><span class="area-pill">Horsham</span>
@@ -756,30 +847,37 @@
       <div class="contact-form-panel">
         <h3>Request a free estimate</h3>
         <p>Tell us a little about your project and Jonny will be in touch.</p>
-        <div class="form-group"><label>Your name</label><input type="text" placeholder="e.g. Sarah Thompson"></div>
-        <div class="form-group"><label>Phone number</label><input type="tel" placeholder="07700 000000"></div>
-        <div class="form-group"><label>Email address</label><input type="email" placeholder="you@email.com"></div>
-        <div class="form-group">
-          <label>Type of work</label>
-          <select>
-            <option value="" disabled selected>Select a service…</option>
-            <option>Kitchen Installation</option>
-            <option>Kitchen Design, Supply & Install</option>
-            <option>Kitchen Refurbishment</option>
-            <option>Worktop Replacement</option>
-            <option>Bespoke Carpentry / Furniture</option>
-            <option>Bathroom / En-Suite</option>
-            <option>Tiling</option>
-            <option>General Property Maintenance</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Tell us about your project</label><textarea placeholder="e.g. We have a kitchen arriving from Wren in 6 weeks and need an experienced fitter…"></textarea></div>
-        <button class="form-submit" id="submitBtn">Send Enquiry</button>
+        <form name="enquiry" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" id="enquiryForm">
+          <input type="hidden" name="form-name" value="enquiry">
+          <p class="hidden-field" aria-hidden="true"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="form-group"><label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="e.g. Sarah Thompson" required></div>
+          <div class="form-group"><label for="f-phone">Phone number <span class="req" aria-hidden="true">*</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="07700 000000" required></div>
+          <div class="form-group"><label for="f-email">Email address</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@email.com"></div>
+          <div class="form-group">
+            <label for="f-service">Type of work</label>
+            <select id="f-service" name="service">
+              <option value="" selected>Select a service…</option>
+              <option>Kitchen Installation</option>
+              <option>Kitchen Design, Supply &amp; Install</option>
+              <option>Kitchen Refurbishment</option>
+              <option>Worktop Replacement</option>
+              <option>Bespoke Carpentry / Furniture</option>
+              <option>Bathroom / En-Suite</option>
+              <option>Tiling</option>
+              <option>General Property Maintenance</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="f-message">Tell us about your project <span class="req" aria-hidden="true">*</span></label><textarea id="f-message" name="message" required placeholder="e.g. We have a kitchen arriving from Wren in 6 weeks and need an experienced fitter…"></textarea></div>
+          <button class="form-submit" id="submitBtn" type="submit">Send Enquiry</button>
+          <p class="form-note">* Required. Your details are only used to reply to your enquiry.</p>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
       </div>
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -787,16 +885,16 @@
     <span>JP Lea Installations</span>
     <span>Kitchen Fitting & Bespoke Carpentry · West Sussex</span>
   </div>
-  <ul class="footer-links">
+  <ul class="footer-links" aria-label="Footer">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#carpentry">Bespoke Carpentry</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="https://www.pinterest.co.uk" target="_blank" rel="noopener">Pinterest</a></li>
+    <!-- APTO PLACEHOLDER: Pinterest footer link hidden until the real profile URL is supplied. -->
   </ul>
-  <div class="footer-right">© 2025 JP Lea Installations. All rights reserved.</div>
+  <div class="footer-right">© <span id="year">2026</span> JP Lea Installations. All rights reserved.</div>
 </footer>
 
 <script>
@@ -804,46 +902,58 @@
   const slides   = document.querySelectorAll('.slide');
   const dotWrap  = document.getElementById('dotContainer');
   const counter  = document.getElementById('photoCount');
+  const heroRight = document.querySelector('.hero-right');
   const total    = slides.length;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const INTERVAL = 5000; // was 2000ms, too fast to take in each photo
   let current    = 0;
   let timer;
 
-  // Build dots
-  slides.forEach((_, i) => {
+  slides.forEach((slide, i) => {
+    slide.setAttribute('role', 'group');
+    slide.setAttribute('aria-roledescription', 'slide');
+    slide.setAttribute('aria-label', (i + 1) + ' of ' + total);
+    if (i !== 0) slide.setAttribute('aria-hidden', 'true');
     const d = document.createElement('button');
+    d.type = 'button';
     d.className = 'dot' + (i === 0 ? ' active' : '');
-    d.setAttribute('aria-label', 'Go to photo ' + (i+1));
+    d.setAttribute('aria-label', 'Show photo ' + (i + 1));
+    if (i === 0) d.setAttribute('aria-current', 'true');
     d.addEventListener('click', () => goTo(i));
     dotWrap.appendChild(d);
   });
-
-  function getDots() { return dotWrap.querySelectorAll('.dot'); }
+  const dots = dotWrap.querySelectorAll('.dot');
 
   function goTo(n) {
     slides[current].classList.remove('active');
-    getDots()[current].classList.remove('active');
+    slides[current].setAttribute('aria-hidden', 'true');
+    dots[current].classList.remove('active');
+    dots[current].removeAttribute('aria-current');
     current = (n + total) % total;
     slides[current].classList.add('active');
-    getDots()[current].classList.add('active');
+    slides[current].removeAttribute('aria-hidden');
+    dots[current].classList.add('active');
+    dots[current].setAttribute('aria-current', 'true');
     counter.textContent = (current + 1) + ' / ' + total;
     resetTimer();
   }
-
   function next() { goTo(current + 1); }
   function prev() { goTo(current - 1); }
-
+  function stopTimer() { clearInterval(timer); }
   function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(next, 2000);
+    stopTimer();
+    if (!reduceMotion) timer = setInterval(next, INTERVAL);
   }
 
   document.getElementById('nextBtn').addEventListener('click', next);
   document.getElementById('prevBtn').addEventListener('click', prev);
 
-  // Pause on hover
-  const heroRight = document.querySelector('.hero-right');
-  heroRight.addEventListener('mouseenter', () => clearInterval(timer));
-  heroRight.addEventListener('mouseleave', () => resetTimer());
+  // Pause on hover / keyboard focus
+  heroRight.addEventListener('mouseenter', stopTimer);
+  heroRight.addEventListener('mouseleave', resetTimer);
+  heroRight.addEventListener('focusin', stopTimer);
+  heroRight.addEventListener('focusout', resetTimer);
+  document.addEventListener('visibilitychange', () => document.hidden ? stopTimer() : resetTimer());
 
   // Swipe support for mobile
   let touchStartX = 0;
@@ -855,26 +965,59 @@
 
   resetTimer();
 
+  // ── MOBILE MENU ──
+  const menuBtn = document.querySelector('.menu-toggle');
+  const navList = document.getElementById('primaryNav');
+  function setMenu(open) {
+    navList.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  menuBtn.addEventListener('click', () => setMenu(!navList.classList.contains('open')));
+  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
   // ── ACTIVE NAV on scroll ──
   const navLinks = document.querySelectorAll('.nav-links a');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
+        navLinks.forEach(l => { l.classList.remove('active'); l.removeAttribute('aria-current'); });
         const a = document.querySelector('.nav-links a[href="#' + e.target.id + '"]');
-        if (a) a.classList.add('active');
+        if (a && !a.classList.contains('nav-cta')) { a.classList.add('active'); a.setAttribute('aria-current', 'true'); }
       }
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
-
   document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
 
-  // ── FORM ──
-  document.getElementById('submitBtn').addEventListener('click', function() {
-    this.textContent = 'Enquiry sent ✓';
-    this.style.background = '#2C5A3A';
-    setTimeout(() => { this.textContent = 'Send Enquiry'; this.style.background = ''; }, 3000);
+  // ── FORM (Netlify Forms, submitted in the background; falls back to /thanks.html without JS) ──
+  const form = document.getElementById('enquiryForm');
+  const statusEl = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+    statusEl.className = 'form-status';
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+      if (!res.ok) throw new Error(res.status);
+      form.reset();
+      statusEl.textContent = 'Thank you, your enquiry has been sent. Jonny will be in touch soon.';
+      statusEl.className = 'form-status ok';
+    } catch (err) {
+      statusEl.textContent = 'Sorry, something went wrong sending your enquiry. Please call 07361 591810 instead.';
+      statusEl.className = 'form-status err';
+    } finally {
+      submitBtn.disabled = false; submitBtn.textContent = 'Send Enquiry';
+    }
   });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
